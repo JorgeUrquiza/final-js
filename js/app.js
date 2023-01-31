@@ -13,6 +13,17 @@ function cargarEventListeners() {
     //Cuando agregas un producto precionando agregar al carrito
     listaProductos.addEventListener('click', agregarProducto)
 
+    //Notificacion agregar producto
+    listaProductos.addEventListener('click', () => {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Producto agregado',
+            showConfirmButton: false,
+            timer: 800
+        });
+    })
+
     //Elimina productos del carrito
     carrito.addEventListener('click', eliminarProducto);
 
